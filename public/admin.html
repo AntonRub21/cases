@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CS2 Cases Admin</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="top">
+        <h1>Admin Panel</h1>
+        <a href="/">← Back to App</a>
+      </header>
+
+      <section class="panel two-col">
+        <div>
+          <h2>Create Case</h2>
+          <input id="adminCaseName" placeholder="Case name" />
+          <input id="adminCaseDescription" placeholder="Description" />
+          <input id="adminCaseImage" placeholder="Case image URL" />
+          <input id="adminCaseCoins" type="number" placeholder="Price Coins" />
+          <textarea id="adminItems" rows="8" placeholder='Items JSON: [{"skinName":"AK-47 | Redline","imageUrl":"https://...","rarity":"rare","dropWeight":10,"steamValue":22}]'></textarea>
+          <button id="createCaseBtn">Create Case</button>
+        </div>
+
+        <div>
+          <h2>Adjust Player Balance</h2>
+          <input id="adminTargetTelegramId" placeholder="Target Telegram ID" />
+          <input id="adminCoinsDelta" type="number" placeholder="Coins delta" value="0" />
+          <button id="adjustBalanceBtn">Apply Update</button>
+
+          <h3>Users</h3>
+          <ul id="users"></ul>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Withdrawal Moderation</h2>
+        <ul id="withdrawals"></ul>
+      </section>
+
+      <p id="status"></p>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

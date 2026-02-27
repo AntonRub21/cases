@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>GGDrop x 1win Cases</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="gg-header">
+        <div class="left">
+          <div class="logo">G</div>
+          <div class="brand-text">
+            <strong>CS2 DROP</strong>
+            <small>GGDrop / 1win vibe</small>
+          </div>
+        </div>
+        <div class="right">
+          <button id="loginBtn" class="login">ВОЙТИ</button>
+          <button id="sectionsBtn" class="menu">☰</button>
+        </div>
+      </header>
+
+      <div id="sectionsMenu" class="sections-menu hidden">
+        <button class="section-link" data-tab="cases">Кейсы</button>
+        <button class="section-link" data-tab="inventory">Инвентарь</button>
+        <button class="section-link" data-tab="topup">Пополнение</button>
+        <button class="section-link" data-tab="profile">Профиль</button>
+        <button class="section-link" data-tab="support">Поддержка</button>
+        <a class="section-link" href="/admin.html">Админка</a>
+      </div>
+
+      <section class="hero-banner">
+        <div class="hero-copy">
+          <h1>GAMBLING CASE BATTLES</h1>
+          <p>Открывай CS2 кейсы, выбивай редкие скины и выводи в Steam.</p>
+        </div>
+        <div class="hero-chip">LIVE DROP</div>
+      </section>
+
+      <section class="category-grid">
+        <button>БОНУСЫ</button><button>АПГРЕЙД</button><button>КОНТРАКТЫ</button>
+        <button>КЕЙС БАТЛ</button><button>ТОП ДРОПЫ</button><button>ТУРНИРЫ</button>
+      </section>
+
+      <section id="section-cases" class="section active">
+        <div class="section-head">
+          <h2>Популярные кейсы</h2>
+          <span id="balanceLabel">Coins: 0</span>
+        </div>
+        <div id="cases" class="cases-grid"></div>
+      </section>
+
+      <section id="section-inventory" class="section">
+        <div class="section-head"><h2>Инвентарь</h2></div>
+        <ul id="inventory" class="list"></ul>
+      </section>
+
+      <section id="section-topup" class="section">
+        <div class="section-head"><h2>Пополнение</h2></div>
+        <div class="panel">
+          <input id="telegramId" placeholder="Telegram ID" />
+          <input id="username" placeholder="Username" />
+          <input id="topupAmount" type="number" min="1" step="1" value="500" />
+          <button id="topupBtn">ПОПОЛНИТЬ COINS</button>
+        </div>
+      </section>
+
+      <section id="section-profile" class="section">
+        <div class="section-head"><h2>Профиль</h2></div>
+        <div class="panel">
+          <p id="profileInfo">Не авторизован</p>
+          <input id="steamUrl" placeholder="Steam trade URL" />
+          <button id="withdrawBtn">ВЫВЕСТИ ВЫБРАННЫЙ СКИН</button>
+        </div>
+        <ul id="history" class="list"></ul>
+      </section>
+
+      <section id="section-support" class="section">
+        <div class="section-head"><h2>Поддержка</h2></div>
+        <div class="panel">
+          <p>VIP support 24/7 • вопросы по дропу и выводу</p>
+          <button id="supportBtn">ОТКРЫТЬ ЧАТ</button>
+        </div>
+      </section>
+
+      <section id="openModal" class="modal hidden">
+        <div class="modal-card">
+          <h3>Открытие кейса...</h3>
+          <div class="reel-wrap">
+            <div class="pointer"></div>
+            <div id="reelTrack" class="reel-track"></div>
+          </div>
+          <p id="openResult"></p>
+        </div>
+      </section>
+
+      <p id="status"></p>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
